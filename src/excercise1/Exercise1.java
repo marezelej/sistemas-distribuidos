@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Exercise1 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         Scanner s = new Scanner(System.in);
         String Input = "";
         System.out.println("Ingrese 0 para salir");
@@ -18,9 +18,9 @@ public class Exercise1 {
             Input = s.nextLine();
             if (Input.equals("1")) {
                 System.out.println("Esperando mensaje...");
-                System.out.println(SC.ReceiveMessage());
+                System.out.println(SC.ReceiveMessage("M1"));
             } else if (!Input.equals("0")) {
-                SC.SendMessage(Input);
+                SC.SendMessage(Input, "M1");
             }
         }
     }
